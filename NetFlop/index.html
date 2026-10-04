@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NetFlop — One Episode. That's The Lie.</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top navigation bar -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      NET<span>FLOP</span> 🍿
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#shows">Shows</a></li>
+      <li><a href="#flop-meter">Flop Meter</a></li>
+      <li><a href="#continue">Continue</a></li>
+      <li><a href="login.html">Log In</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <a href="login.html" class="login-link">Log In</a>
+      <a href="signup.html" class="signup-btn">Sign Up</a>
+    </div>
+  </nav>
+
+  <!-- Hero landing banner -->
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="live-pill">
+        <span class="live-dot"></span>
+        <span>🔴 <span id="liveCounter">47,293</span> people are currently flopping</span>
+      </div>
+
+      <h1>
+        ONE EPISODE.<br>
+        <span class="red-text">THAT’S THE LIE.</span>
+      </h1>
+
+      <p>
+        You came here to watch something for 20 minutes.<br>
+        It’s now 2:47 AM and you have class tomorrow.
+      </p>
+
+      <div class="hero-btns">
+        <a href="#shows" class="btn-primary">🍿 Start Flopping</a>
+        <button type="button" class="btn-secondary" onclick="handleStudyClick()">I’m Supposed To Study</button>
+      </div>
+
+      <div class="warning-tag">
+        ⚠️ WARNING: NetFlop may cause severe procrastination.
+      </div>
+    </div>
+  </header>
+
+  <!-- Flop meter section -->
+  <section id="flop-meter" class="flop-meter-section">
+    <div class="meter-box">
+      <h2>HOW COOKED ARE YOU?</h2>
+      <p class="subtitle">Diagnostic tool for late-night college students</p>
+
+      <div class="meter-top-row">
+        <span>Your productivity</span>
+        <span id="meterPercent" class="meter-percentage">13%</span>
+      </div>
+
+      <div class="meter-track">
+        <div id="meterBar" class="meter-bar"></div>
+      </div>
+
+      <div class="meter-labels">
+        <span>Productive</span>
+        <span>Absolutely cooked 💀</span>
+      </div>
+
+      <div id="meterStatus" class="meter-status">
+        STATUS: WE’RE COOKED.
+      </div>
+
+      <button type="button" class="btn-worse" onclick="increaseCooked()">
+        Make It Worse
+      </button>
+    </div>
+  </section>
+
+  <!-- Show cards section -->
+  <section id="shows" class="shows-section">
+    <h2 class="section-heading">Trending on NetFlop</h2>
+
+    <div class="cards-grid">
+      <!-- Card 1 -->
+      <div class="show-card">
+        <div class="poster-box" style="background: linear-gradient(135deg, #370617, #6a040f);">
+          <span class="poster-number">#1</span>
+          <span class="poster-emoji">🔁</span>
+        </div>
+        <div class="card-details">
+          <div>
+            <h3 class="card-title">JUST ONE MORE</h3>
+            <p class="card-description">“You said this 4 episodes ago.”</p>
+          </div>
+          <button type="button" class="btn-card-resume" onclick="resumeCard('JUST ONE MORE')">
+            ▶ Resume
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="show-card">
+        <div class="poster-box" style="background: linear-gradient(135deg, #10002b, #3c096c);">
+          <span class="poster-number">#2</span>
+          <span class="poster-emoji">💻</span>
+        </div>
+        <div class="card-details">
+          <div>
+            <h3 class="card-title">ACADEMIC WEAPON</h3>
+            <p class="card-description">“Opened the laptop. Did everything except study.”</p>
+          </div>
+          <button type="button" class="btn-card-resume" onclick="resumeCard('ACADEMIC WEAPON')">
+            ▶ Resume
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="show-card">
+        <div class="poster-box" style="background: linear-gradient(135deg, #03045e, #0077b6);">
+          <span class="poster-number">#3</span>
+          <span class="poster-emoji">🥱</span>
+        </div>
+        <div class="card-details">
+          <div>
+            <h3 class="card-title">SLEEP SCHEDULE</h3>
+            <p class="card-description">“Last seen somewhere around 2024.”</p>
+          </div>
+          <button type="button" class="btn-card-resume" onclick="resumeCard('SLEEP SCHEDULE')">
+            ▶ Resume
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="show-card">
+        <div class="poster-box" style="background: linear-gradient(135deg, #1f1a38, #5b1065);">
+          <span class="poster-number">#4</span>
+          <span class="poster-emoji">⏰</span>
+        </div>
+        <div class="card-details">
+          <div>
+            <h3 class="card-title">I’LL START TOMORROW</h3>
+            <p class="card-description">“A classic. Renewed for 17 seasons.”</p>
+          </div>
+          <button type="button" class="btn-card-resume" onclick="resumeCard('I’LL START TOMORROW')">
+            ▶ Resume
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Continue watching section -->
+  <section id="continue" class="continue-section">
+    <h2 class="section-heading">CONTINUE WATCHING</h2>
+
+    <div class="continue-banner">
+      <div class="continue-left">
+        <div class="continue-icon">📚</div>
+        <div class="continue-text">
+          <h3>HOW TO BECOME PRODUCTIVE</h3>
+          <p>“You watched 11 seconds. Honestly? That’s enough.”</p>
+          <div class="progress-track">
+            <div class="progress-thumb"></div>
+          </div>
+        </div>
+      </div>
+
+      <button type="button" class="btn-primary" onclick="resumeProductiveGuide()">
+        ▶ Resume
+      </button>
+    </div>
+  </section>
+
+  <!-- Final CTA section -->
+  <section class="cta-section">
+    <h2>YOU SHOULD PROBABLY LEAVE.</h2>
+    <p class="cta-line">“But you won’t.”</p>
+    <p>“We both know how this ends.”</p>
+    <a href="signup.html" class="btn-primary">Accept Your Fate →</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 NetFlop — made instead of doing something productive.</p>
+    <p class="quote">“No productivity was harmed during development.”</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

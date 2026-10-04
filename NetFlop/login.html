@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NetFlop — Log In</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+
+  <!-- Header -->
+  <header class="auth-nav">
+    <a href="index.html" class="logo">
+      NET<span>FLOP</span> 🍿
+    </a>
+    <a href="index.html" class="back-link">← Escape NetFlop</a>
+  </header>
+
+  <!-- Login Card -->
+  <main class="auth-wrapper">
+    <div class="auth-card">
+      <div class="card-logo">netflop</div>
+      <div class="card-emoji">💀</div>
+
+      <h2>Oh. You’re back.</h2>
+      <p class="card-subtitle">We knew you weren’t actually going to study.</p>
+
+      <form class="auth-form" onsubmit="validateLogin(event)">
+        <div class="input-group">
+          <label for="loginEmail">Email</label>
+          <input 
+            type="email" 
+            id="loginEmail" 
+            placeholder="your totally real email" 
+            required
+          >
+        </div>
+
+        <div class="input-group">
+          <label for="loginPassword">Password</label>
+          <input 
+            type="password" 
+            id="loginPassword" 
+            placeholder="definitely not 123456" 
+            required
+          >
+        </div>
+
+        <div class="form-options">
+          <label>
+            <input type="checkbox"> Remember me
+          </label>
+          <span class="forgot-text" onclick="showForgotMsg()">Forgot it already?</span>
+        </div>
+
+        <button type="submit" class="btn-submit">
+          Let Me Flop →
+        </button>
+      </form>
+
+      <div class="auth-switch">
+        New here? Unfortunately, yes. <a href="signup.html">Sign up</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 NetFlop — College Web Dev Lab</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "name": "NetFlop",
+  "description": "A sarcastic parody streaming website for students in their flop era.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

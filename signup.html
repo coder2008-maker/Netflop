@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NetFlop — Sign Up</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+
+  <!-- Header -->
+  <header class="auth-nav">
+    <a href="index.html" class="logo">
+      NET<span>FLOP</span> 🍿
+    </a>
+    <a href="index.html" class="back-link">← Go back</a>
+  </header>
+
+  <!-- Signup Card -->
+  <main class="auth-wrapper">
+    <div class="auth-card">
+      <div class="card-logo">netflop</div>
+      <div class="card-emoji">💀</div>
+
+      <h2>Enter Your Flop Era</h2>
+      <p class="card-subtitle">Create an account. Lose several hours. Repeat.</p>
+
+      <form class="auth-form" onsubmit="validateSignup(event)">
+        <div class="input-group">
+          <label for="signupName">Name</label>
+          <input 
+            type="text" 
+            id="signupName" 
+            placeholder="what do we call you?" 
+            required
+          >
+        </div>
+
+        <div class="input-group">
+          <label for="signupEmail">Email</label>
+          <input 
+            type="email" 
+            id="signupEmail" 
+            placeholder="drop the email" 
+            required
+          >
+        </div>
+
+        <div class="input-group">
+          <label for="signupPass">Password</label>
+          <input 
+            type="password" 
+            id="signupPass" 
+            placeholder="something you’ll remember" 
+            required
+          >
+        </div>
+
+        <div class="input-group">
+          <label for="signupConfirm">Confirm Password</label>
+          <input 
+            type="password" 
+            id="signupConfirm" 
+            placeholder="same thing again pls" 
+            required
+          >
+        </div>
+
+        <div class="input-group" style="margin-top: 15px;">
+          <label style="display: flex; align-items: flex-start; gap: 8px; cursor: pointer; font-weight: normal;">
+            <input type="checkbox" id="signupTerms" style="margin-top: 3px;">
+            <span style="font-size: 13px; color: #d0d0e0;">I accept that my productivity is cooked.</span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn-submit" style="margin-top: 10px;">
+          Enter The Flop →
+        </button>
+      </form>
+
+      <div class="auth-switch">
+        Already flopping? <a href="login.html">Log in</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 NetFlop — College Web Dev Lab</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
